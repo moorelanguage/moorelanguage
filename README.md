@@ -1,4 +1,13 @@
 ## Hi there 👋
+Lenape language lover. Lover of languages in general. More languages for me please!
+
+I know:
+[![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff)](#)
+[![Markdown](https://img.shields.io/badge/Markdown-%23000000.svg?logo=markdown&logoColor=white)](#)
+
+I use:
+[![Obsidian](https://img.shields.io/badge/Obsidian-%23483699.svg?&logo=obsidian&logoColor=white)](#) 
+[![Notepad++](https://img.shields.io/badge/Notepad++-90E59A.svg?&logo=notepad%2b%2b&logoColor=black)](#)
 
 <!--
 **moorelanguage/moorelanguage** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
