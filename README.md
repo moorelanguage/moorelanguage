@@ -24,11 +24,12 @@ I love exploring languages and building tools to support language learning, pres
 [![Obsidian](https://img.shields.io/badge/Obsidian-%23483699.svg?&logo=obsidian&logoColor=white)](#) - note-taking and dictionary  
 [![Toggl Track](https://img.shields.io/badge/Toggl%20Track-2C1338?logo=toggl&logoColor=fff)](#) - Time-tracking for language learning  
 
-### Projects (coming soon!)
-- Lenape Dictionary: Developing a dictionary for language learning, and offline dictionary program that will be accessible.
-- Lenape TTS: A Simple Text-to-speech system for Lenape, planned Southern Unami Dialect and Munsee Dialect support as options.
-- Tëmp Kaxkëni: A reskin of Brainfuck for fun with the Lenape language as a programming language, with a planned program to convert any program to this programming language and ability write other programming languages programs in Tëmp Kaxkëni. 
-- Lenape-English Command Line Assistant: An English-Lenape Command Line Assistant that uses the Lenape and English Language to open various applications and websites, give the time, etc.
+### Projects 
+- Lenape Dictionary: Developing a dictionary for language learning, and offline dictionary program that will be accessible. (coming to Github soon!)
+- Lenape TTS: A Simple Text-to-speech system for Lenape, planned Southern Unami Dialect and Munsee Dialect support as options. (coming to Github soon!)
+- Tëmp Kaxkëni: A reskin of Brainfuck for fun with the Lenape language as a programming language, with a planned converter to convert any program to this programming language. There is also the planned ability write other programming languages in the Tëmp Kaxkëni progamming language. (coming to Github soon!)
+   - An example would be pythons 'print("hello world!")' becoming the code in this file: [hello_world.lenape](#) 
+- [CLI Lenape Assistant](https://github.com/moorelanguage/CLI-Lenape-Assistant): This is a command line Lenape assistant to help you do various tasks from the command line in English and Lenape.
 
 Again, all of those aren't on Github at the moment but will be coming soon! 
 
