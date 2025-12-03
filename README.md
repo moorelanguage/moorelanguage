@@ -25,11 +25,11 @@ I love exploring languages and building tools to support language learning, pres
 [![Toggl Track](https://img.shields.io/badge/Toggl%20Track-2C1338?logo=toggl&logoColor=fff)](#) - Time-tracking for language learning  
 
 ### Projects 
-- Lenape Dictionary: Developing a dictionary for language learning, and offline dictionary program that will be accessible. (coming to Github soon!)
-- Lenape TTS: A Simple Text-to-speech system for Lenape, planned Southern Unami Dialect and Munsee Dialect support as options. (coming to Github soon!)
-- Tëmp Kaxkëni: A reskin of Brainfuck for fun with the Lenape language as a programming language, with a planned converter to convert any program to this programming language. There is also the planned ability write other programming languages in the Tëmp Kaxkëni progamming language. (coming to Github soon!)
-   - An example would be pythons 'print("hello world!")' becoming the code in this file: [hello_world.lenape](#) 
-- [CLI Lenape Assistant](https://github.com/moorelanguage/CLI-Lenape-Assistant): This is a command line Lenape assistant to help you do various tasks from the command line in English and Lenape.
+- **Lenape Dictionary**: Developing a dictionary for language learning, and offline dictionary program that will be accessible. (coming to Github soon!)
+- **Lenape TTS**: A Simple Text-to-speech system for Lenape, planned Southern Unami Dialect and Munsee Dialect support as options. (coming to Github soon!)
+- **Tëmp Kaxkëni**: A reskin of Brainfuck for fun with the Lenape language as a programming language, with a planned converter to convert any program to this programming language. There is also the planned ability write other programming languages in the Tëmp Kaxkëni progamming language. (coming to Github soon!)
+   - An example would be pythons 'print("hello world!")' becoming the code in this file: [hello_world.lenape](https://github.com/moorelanguage/moorelanguage/blob/main/hello_world.lenape) 
+- **[CLI Lenape Assistant](https://github.com/moorelanguage/CLI-Lenape-Assistant)**: This is a command line Lenape assistant to help you do various tasks from the command line in English and Lenape.
 
 Again, all of those aren't on Github at the moment but will be coming soon! 
 
