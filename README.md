@@ -17,7 +17,7 @@ I love exploring languages and building tools to support language learning, pres
 [![Obsidian](https://img.shields.io/badge/Obsidian-%23483699.svg?&logo=obsidian&logoColor=white)](#) - Note-taking and Programming  
 [![Notepad++](https://img.shields.io/badge/Notepad++-90E59A.svg?&logo=notepad%2b%2b&logoColor=black)](#) - Programming IDE  
 [![Git](https://img.shields.io/badge/Git-B22222?logo=git&logoColor=fff)](#) - Version Control  
-[![SQLite](https://img.shields.io/badge/SQLite-D3D3D3?logo=sqlite&logoColor=003B57)](#) - Database
+[![SQLite](https://img.shields.io/badge/SQLite-D3D3D3?logo=sqlite&logoColor=003B57)](#) - Database  
 [![Overleaf](https://img.shields.io/badge/Overleaf-46A247?logo=overleaf&logoColor=white)](#) - Resume and other writings
 
 
