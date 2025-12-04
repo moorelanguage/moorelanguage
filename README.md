@@ -3,7 +3,9 @@ I am a Lenape language enthusiast and computational linguistics hobbyist.
 I love exploring languages and building tools to support language learning, preservation, and tools in those languages. 
 - 🔭 I’m currently working on my Lenape Dictionary program
 - 🌱 I’m currently learning Lenape 
-- 📄 I’m looking for work! 
+- 📄 I’m looking for work!
+
+Click on this button to navigate to my [![Ultimate Lenape Language List](https://img.shields.io/badge/Ultimate_Lenape_Language_List-D50205)](https://github.com/moorelanguage/awesome-lenape) 
 
 ### Languages 
 [![Native English](https://img.shields.io/badge/Native%20English-808080?logo=none)](#) [![Learning Lenape](https://img.shields.io/badge/Learning%20Lenape-FF0000?logo=none)](#)  
