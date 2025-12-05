@@ -1,8 +1,9 @@
 ## Hi there 👋
-I am a Lenape language enthusiast and computational linguistics hobbyist.  
+I am a Lenape language enthusiast and computational linguistics hobbyist-combining linguistics and technology. 
 I love exploring languages and building tools to support language learning, preservation, and tools in those languages. 
 - 🔭 I’m currently working on my Lenape Dictionary program
-- 🌱 I’m currently learning Lenape 
+- 🌱 I’m currently learning Lenape
+- ⏸️ I'm currently researching Low-Resource ASR in my free-time, but it is on the backburner right now. 
 - 📄 I'm employeed on a short-term project. 
 
 Click on this button to navigate to my [![Ultimate Lenape Language List](https://img.shields.io/badge/Ultimate_Lenape_Language_List-D50205)](https://github.com/moorelanguage/awesome-lenape) 
