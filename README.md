@@ -1,5 +1,5 @@
 ## Hi there 👋
-I am a Lenape language enthusiast and computational linguistics hobbyist-combining linguistics and technology. 
+I am a Lenape language enthusiast and computational linguistics hobbyist-combining linguistics and technology.   
 I love exploring languages and building tools to support language learning, preservation, and tools in those languages. 
 - 🔭 I’m currently working on my Lenape Dictionary program
 - 🌱 I’m currently learning Lenape
