@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Animal Sudoku (Enhanced)</title>
+<style>
+:root {
+  --bg: #f5f5f5;
+  --text: #000;
+  --cell-bg: #fff;
+  --fixed-bg: #ddd;
+  --hint-bg: #fff3b0;
+  --highlight-bg: #cceeff;
+}
+body.dark {
+  --bg: #111;
+  --text: #fff;
+  --cell-bg: #222;
+  --fixed-bg: #333;
+  --hint-bg: #665500;
+  --highlight-bg: #4444aa;
+}
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+h1 { margin-bottom: 10px; }
+#controls { margin-bottom: 15px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+table { border-collapse: collapse; box-shadow: 0 0 10px rgba(0,0,0,0.2); }
+td {
+  width: 45px;
+  height: 45px;
+  background: var(--cell-bg);
+  color: var(--text);
+  text-align: center;
+  font-size: 30px;
+  border: 1px solid #888;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+td.fixed { background: var(--fixed-bg); font-weight: bold; cursor: default; }
+td.hint { background: var(--hint-bg) !important; }
+td.wrong { background: #f88 !important; }
+td.rowcol-highlight:not(.fixed) { background: var(--highlight-bg) !important; }
+td:nth-child(3), td:nth-child(6) { border-right: 3px solid #333; }
+tr:nth-child(3) td, tr:nth-child(6) td { border-bottom: 3px solid #333; }
+button, select { padding: 8px 12px; border: none; border-radius: 6px; cursor: pointer; font-size: 16px; }
+button:hover, select:hover { opacity: 0.85; }
+#themes { display: flex; gap: 4px; }
+.theme-btn { width: 22px; height: 22px; border-radius: 50%; cursor: pointer; border: 2px solid #555; }
+@media (max-width: 500px) { td { width: 34px; height: 34px; font-size: 22px; } }
+</style>
+</head>
+<body>
+<h1>🐝 Animal Sudoku 🦊</h1>
+<div id="controls">
+  <div>Difficulty:
+    <select id="difficulty">
+      <option value="30">Easy</option>
+      <option value="40" selected>Medium</option>
+      <option value="50">Hard</option>
+    </select>
+  </div>
+
+  <button id="newBtn">New Puzzle</button>
+  <button id="checkBtn">Check</button>
+  <button id="clearBtn">Clear</button>
+  <button id="darkBtn">🌙 Dark Mode</button>
+
+  <div id="themes">
+    <div class="theme-btn" style="background:#f5f5f5" data-theme="0"></div>
+    <div class="theme-btn" style="background:#d0eaff" data-theme="1"></div>
+    <div class="theme-btn" style="background:#ffe1e1" data-theme="2"></div>
+    <div class="theme-btn" style="background:#e8ffd8" data-theme="3"></div>
+  </div>
+
+  <select id="animalSet">
+    <option value="default">Default Animals</option>
+    <option value="farm">Farm Animals</option>
+    <option value="ocean">Ocean Creatures</option>
+  </select>
+</div>
+
+<table id="sudoku" aria-label="Animal Sudoku"></table>
+<p>Click a cell and press numbers 1–9. Press H for hints. Press 0/Backspace/Delete to clear.</p>
+
+<script>
+const animalSets = {
+  default: {1:'🐝',2:'🐿️',3:'🦊',4:'🐦‍⬛',5:'🐇',6:'🐦',7:'🐄',8:'🦌',9:'🦅'},
+  farm:    {1:'🐔',2:'🐄',3:'🐑',4:'🐖',5:'🐐',6:'🦃',7:'🐓',8:'🧑‍🌾',9:'🐕'},
+  ocean:   {1:'🐟',2:'🐠',3:'🦈',4:'🐬',5:'🐳',6:'🐙',7:'🦑',8:'🪼',9:'🦀'}
+};
+
+let animalMap = animalSets.default;
+let puzzle = [], solution = [], selectedCell = null;
+const table = document.getElementById('sudoku');
+const difficultyEl = document.getElementById('difficulty');
+const animalSetEl = document.getElementById('animalSet');
+
+function shuffle(a){ for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } }
+function isValid(board,r,c,n){ for(let i=0;i<9;i++) if(board[r][i]===n) return false; for(let i=0;i<9;i++) if(board[i][c]===n) return false; const sr=Math.floor(r/3)*3, sc=Math.floor(c/3)*3; for(let i=sr;i<sr+3;i++) for(let j=sc;j<sc+3;j++) if(board[i][j]===n) return false; return true; }
+function solve(board){ for(let r=0;r<9;r++){ for(let c=0;c<9;c++){ if(board[r][c]===0){ let nums=[1,2,3,4,5,6,7,8,9]; shuffle(nums); for(let n of nums){ if(isValid(board,r,c,n)){ board[r][c]=n; if(solve(board)) return true; board[r][c]=0; } } return false; } } } return true; }
+function generatePuzzle(removeCount){ solution = Array.from({length:9},()=>Array(9).fill(0)); solve(solution); puzzle = solution.map(r=>r.slice()); let cells=[]; for(let i=0;i<9;i++) for(let j=0;j<9;j++) cells.push([i,j]); shuffle(cells); for(let k=0;k<removeCount && k<cells.length;k++){ const [i,j]=cells[k]; puzzle[i][j]=0; } }
+
+function highlightRowCol(cell){
+  document.querySelectorAll('td.rowcol-highlight').forEach(td=>td.classList.remove('rowcol-highlight'));
+  if(!cell) return;
+  const r=parseInt(cell.dataset.row), c=parseInt(cell.dataset.col);
+  for(let i=0;i<9;i++){
+    if(!table.rows[r].cells[i].classList.contains('fixed')) table.rows[r].cells[i].classList.add('rowcol-highlight');
+    if(!table.rows[i].cells[c].classList.contains('fixed')) table.rows[i].cells[c].classList.add('rowcol-highlight');
+  }
+}
+
+function createSudoku(){
+  table.innerHTML='';
+  for(let r=0;r<9;r++){
+    const row=document.createElement('tr');
+    for(let c=0;c<9;c++){
+      const cell=document.createElement('td');
+      cell.dataset.row=r;
+      cell.dataset.col=c;
+      cell.tabIndex=0;
+      if(puzzle[r][c]!==0){
+        cell.textContent=animalMap[puzzle[r][c]];
+        cell.classList.add('fixed');
+      }
+      cell.addEventListener('click', ()=>{ selectedCell=cell; removeHints(); highlightRowCol(cell); });
+      cell.addEventListener('focus', ()=>{ selectedCell=cell; removeHints(); highlightRowCol(cell); });
+      row.appendChild(cell);
+    }
+    table.appendChild(row);
+  }
+}
+
+function setCell(n){ if(!selectedCell||selectedCell.classList.contains('fixed')) return; const r=parseInt(selectedCell.dataset.row), c=parseInt(selectedCell.dataset.col); if(isValid(puzzle,r,c,n)){ puzzle[r][c]=n; selectedCell.textContent=animalMap[n]; selectedCell.classList.remove('wrong'); } else selectedCell.classList.add('wrong'); }
+function clearCell(){ if(!selectedCell||selectedCell.classList.contains('fixed')) return; const r=parseInt(selectedCell.dataset.row), c=parseInt(selectedCell.dataset.col); puzzle[r][c]=0; selectedCell.textContent=''; selectedCell.classList.remove('wrong'); selectedCell.title=''; }
+function getHints(r,c){ const hints=[]; for(let n=1;n<=9;n++) if(isValid(puzzle,r,c,n)) hints.push(animalMap[n]); return hints; }
+function showHints(){ if(!selectedCell) return; removeHints(); const r=parseInt(selectedCell.dataset.row), c=parseInt(selectedCell.dataset.col); const hints=getHints(r,c); if(hints.length){ selectedCell.title='Hints: '+hints.join(' '); selectedCell.classList.add('hint'); } }
+function removeHints(){ document.querySelectorAll('td.hint').forEach(td=>{ td.classList.remove('hint'); td.title=''; }); }
+function checkSolution(){ for(let r=0;r<9;r++) for(let c=0;c<9;c++){ if(puzzle[r][c]!==solution[r][c]){ alert('❌ Not correct yet!'); return; } } alert('🎉 Correct!'); }
+function newPuzzle(){ generatePuzzle(parseInt(difficultyEl.value)||40); createSudoku(); }
+function toggleDark(){ document.body.classList.toggle('dark'); }
+function setTheme(i){ const themes=['#f5f5f5','#d0eaff','#ffe1e1','#e8ffd8']; document.body.style.background=themes[i]||themes[0]; }
+function changeAnimalSet(){ const key=animalSetEl.value; if(animalSets[key]){ animalMap=animalSets[key]; createSudoku(); } }
+
+document.getElementById('newBtn').addEventListener('click', newPuzzle);
+document.getElementById('checkBtn').addEventListener('click', checkSolution);
+document.getElementById('clearBtn').addEventListener('click', clearCell);
+document.getElementById('darkBtn').addEventListener('click', toggleDark);
+document.querySelectorAll('.theme-btn').forEach(btn=>btn.addEventListener('click', ()=>setTheme(btn.dataset.theme)));
+document.getElementById('animalSet').addEventListener('change', changeAnimalSet);
+document.addEventListener('keydown',(e)=>{ if(!selectedCell) return; if(e.key>='1'&&e.key<='9'){ setCell(parseInt(e.key)); } else if(e.key==='0'||e.key==='Backspace'||e.key==='Delete'){ clearCell(); } else if(e.key.toLowerCase()==='h'){ showHints(); } });
+
+newPuzzle();
+</script>
+</body>
+</html>
