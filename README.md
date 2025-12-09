@@ -33,7 +33,7 @@ Click on this button to navigate to my [![Ultimate Lenape Language List](https:/
 - **Lenape Dictionary**: Developing a dictionary for language learning, and offline dictionary program that will be accessible. (coming to Github soon!)
 - **Lenape TTS**: A Simple Text-to-speech system for Lenape, planned Southern Unami Dialect and Munsee Dialect support as options. (coming to Github soon!)
 - **[Tëmp Kaxkëni](https://github.com/moorelanguage/Temp-Kaxkeni)**: A reskin of Brainfuck for fun with the Lenape language as a programming language, An example program is: [hello_world.lenape](https://github.com/moorelanguage/moorelanguage/blob/main/hello_world.lenape). 
-- **[CLI Lenape Assistant](https://github.com/moorelanguage/CLI-Lenape-Assistant)**: This is a command line Lenape assistant to help you do various tasks from the command line in English and Lenape.
+- **[Lenape Word Game](https://moorelanguage.github.io/lenape-word-game/)**: A word game for the Lenape Language where you guess a word based on it's definition. Supports the Southern Unami dialect. 
 
 Again, all of those aren't on Github at the moment but will be coming soon! 
 
