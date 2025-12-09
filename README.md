@@ -18,7 +18,7 @@ Click on this button to navigate to my [![Ultimate Lenape Language List](https:/
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff)
 
 ### Tools
-[![Obsidian](https://img.shields.io/badge/Obsidian-%23483699.svg?&logo=obsidian&logoColor=white)](#) - Note-taking and Programming  
+[![Obsidian](https://img.shields.io/badge/Obsidian-%23483699.svg?&logo=obsidian&logoColor=white)](https://obsidian.md/) - Note-taking and Programming  
 [![Notepad++](https://img.shields.io/badge/Notepad++-90E59A.svg?&logo=notepad%2b%2b&logoColor=black)](#) - Programming IDE     
 [![Visual Studio Code](https://custom-icon-badges.demolab.com/badge/Visual%20Studio%20Code-0078d7.svg?logo=vsc&logoColor=white)](#) - Programming IDE       
 [![Git](https://img.shields.io/badge/Git-B22222?logo=git&logoColor=fff)](#) - Version Control  
@@ -27,9 +27,9 @@ Click on this button to navigate to my [![Ultimate Lenape Language List](https:/
 
 
 ### Language Learning Tools I use 
-[![Anki](https://img.shields.io/badge/Anki-0098CC?logo=anki&logoColor=fff)](#) - I use this for flashcards and spaced repetition   
-[![Obsidian](https://img.shields.io/badge/Obsidian-%23483699.svg?&logo=obsidian&logoColor=white)](#) - note-taking and dictionary  
-[![Toggl Track](https://img.shields.io/badge/Toggl%20Track-2C1338?logo=toggl&logoColor=fff)](#) - Time-tracking for language learning  
+[![Anki](https://img.shields.io/badge/Anki-0098CC?logo=anki&logoColor=fff)](https://apps.ankiweb.net) - I use this for flashcards and spaced repetition   
+[![Obsidian](https://img.shields.io/badge/Obsidian-%23483699.svg?&logo=obsidian&logoColor=white)](https://obsidian.md/) - note-taking and dictionary  
+[![Toggl Track](https://img.shields.io/badge/Toggl%20Track-2C1338?logo=toggl&logoColor=fff)](https://toggl.com/) - Time-tracking for language learning  
 
 ### Projects 
 - **Lenape Dictionary**: Developing a dictionary for language learning, and offline dictionary program that will be accessible. (coming to Github soon!)
