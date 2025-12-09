@@ -12,10 +12,10 @@ Click on this button to navigate to my [![Ultimate Lenape Language List](https:/
 [![Native English](https://img.shields.io/badge/Native%20English-808080?logo=none)](#) [![Learning Lenape](https://img.shields.io/badge/Learning%20Lenape-FF0000?logo=none)](#)  
 
 ### Programming Languages
-[![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff)](#) - Several public projects and regular use
-[![Markdown](https://img.shields.io/badge/Markdown-%23000000.svg?logo=markdown&logoColor=white)](#) - Daily use (public + private)
-[![LaTeX](https://img.shields.io/badge/LaTeX-008080?logo=latex&logoColor=white)](#) - Frequent use for academic-style writing + résumé
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff) - One public project + a few private projects
+[![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff)](#)  
+[![Markdown](https://img.shields.io/badge/Markdown-%23000000.svg?logo=markdown&logoColor=white)](#)  
+[![LaTeX](https://img.shields.io/badge/LaTeX-008080?logo=latex&logoColor=white)](#)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff)
 
 ### Tools
 [![Obsidian](https://img.shields.io/badge/Obsidian-%23483699.svg?&logo=obsidian&logoColor=white)](#) - Note-taking and Programming  
