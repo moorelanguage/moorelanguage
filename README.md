@@ -44,4 +44,4 @@ Again, all of those aren't on Github at the moment but will be coming soon!
 - 📫 How to reach me:
   - if you come from my resume: use the contact information listed there 
   - Otherwise, contact me at MooreLanguages.Portfolio@gmail.com (this is a public-facing email, different from the one on my resume, to reduce spam)
-- ⚡ Fun fact: I have an over 900 days reading streak.  
+- ⚡ Fun fact: I have an over 1000 days reading streak.  
